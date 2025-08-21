@@ -13,7 +13,7 @@ The nethealthcheck uses Python netmiko library to audit the health check of netw
     python3 nethealthcheck --device-list devices.csv --out result.json
 
     devices.csv format
-      ip.username,password
+      ip,username,password
       10.0.0.1,admin,123456
       10.0.0.2,admin,122234
     
