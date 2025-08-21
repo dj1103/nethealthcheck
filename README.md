@@ -3,14 +3,14 @@
 
 ## Description
 
-The nethealthcheck uses Python netmiko library to audit the health check of network devices, mainly Cisco IOSs using the SSH connection. The result will save as a JSON format.
+The nethealthcheck uses Python netmiko library to audit the health check of network devices, mainly Cisco IOSs using the SSH connection. The result will save as a CSV format.
 
      Testing version: Connect via SSH (username/password) to Cisco devices to check the uptime, hardware/software version, CPU usage, memory usage, and interface status.
 
      
 ## Usage
 
-    python3 nethealthcheck --input devices.csv --out result.json
+    python3 nethealthcheck --input devices.csv --out result.csv
 
     devices.csv format
       ip,username,password
