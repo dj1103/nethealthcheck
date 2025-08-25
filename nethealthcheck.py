@@ -6,6 +6,7 @@ The result will save as a CSV format.
 
 import csv
 import argparse
+import getpass
 from netmiko import ConnectHandler
 
 
@@ -63,9 +64,13 @@ def get_devicehealth(devicelist, output):
         readed = csv.DictReader(infile)
         for device in readed:
             devices.append(device)
-    ## devices == [{'ip': '10.0.0.1', 'username': 'admin', 'password': 'faketest'}, {'ip': '10.0.0.2', 'username': 'admin', 'password': 'testtesttest'}]
+
+    username = input("Enter your username: ")
+    password = getpass.getpass("Enter your password: ")
 
     for device in devices:
+        device["username"] = username
+        device["password"] = password
         deviceresult = check_device(device["ip"], device["username"], device["password"])
         results.append(deviceresult)
 
