@@ -10,9 +10,15 @@ The nethealthcheck uses Python netmiko library to audit the health check of netw
      
 ## Usage
 
-    python3 nethealthcheck
+    python3 nethealthcheck --input list.csv --out result.json
 
-    prompt username and password to send commands
+    list.csv
+         ip
+         10.0.0.1
+         10.0.0.2
+         10.0.0.3
+
+    prompt username and password in a secure method to send commands
 
 ## Version
 
