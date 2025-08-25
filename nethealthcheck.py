@@ -65,7 +65,7 @@ def get_devicehealth(devicelist, output):
         for device in readed:
             devices.append(device)
 
-    username = input("Enter your username: ")
+    username = getpass.getuser("Enter your username: ")
     password = getpass.getpass("Enter your password: ")
 
     for device in devices:
